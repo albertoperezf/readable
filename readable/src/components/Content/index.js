@@ -1,14 +1,11 @@
 import React, {Component} from 'react';
-// import { Link } from 'react-router-dom';
 // import PropTypes from 'prop-types';
 // import classNames from 'classnames';
-import Content from '../Content/index.js';
-import Footer from '../Footer/index.js';
-import Header from '../Header/index.js';
-
+import CategoriesList from '../CategoriesList/index.js';
+import PostList from '../PostList/index.js';
 import './styles.css';
 
-export default class MainContent extends Component {
+export default class Content extends Component {
     static propTypes = {};
 
     static defaultProps = {};
@@ -18,12 +15,15 @@ export default class MainContent extends Component {
         this.state = {}
     }
 
+    componentDidMount() {
+
+    }
+
     render() {
         return (
             <div>
-                <Header/>
-                <Content/>
-                <Footer/>
+                <CategoriesList/>
+                <PostList/>
             </div>
         )
     }

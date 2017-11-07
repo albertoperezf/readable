@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import CategoriesView from './components/CategorieView/index.js';
 import CreateView from './components/CreateView/index.js';
-import Footer from './components/Footer/index.js';
-import Header from './components/Header/index.js';
 import MainContent from './components/MainContent/index.js';
 import PostView from './components/PostView/index.js';
 import './App.css';
@@ -12,7 +10,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-          <Header/>
+          <Route
+              exact
+              path="/"
+              render={() => (
+                  <MainContent/>
+              )}
+          />
           <Route
               exact
               path="/managePost"
@@ -34,8 +38,6 @@ class App extends Component {
                   <PostView/>
               )}
           />
-          <MainContent/>
-          <Footer/>
       </div>
     );
   }
