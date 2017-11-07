@@ -1,11 +1,9 @@
 import React, {Component} from 'react';
 // import PropTypes from 'prop-types'
 // import classNames from 'classnames'
-import CategoriesList from '../CategoriesList/index.js';
-import PostList from '../PostList/index.js';
 import './styles.css';
 
-export default class Footer extends Component {
+export default class Categories extends Component {
     static propTypes = {};
 
     static defaultProps = {};
@@ -15,11 +13,14 @@ export default class Footer extends Component {
         this.state = {}
     }
 
+    componentDidMount() {
+
+    }
+
     render() {
         return (
             <div>
-                <CategoriesList/>
-                <PostList/>
+                I'm a categorie
             </div>
         )
     }
