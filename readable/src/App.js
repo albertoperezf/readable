@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom'
-import logo from './logo.svg';
+// import { Route } from 'react-router-dom'
+import Header from './components/Header/index.js';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">ReactBook</h1>
-        </header>
+        <Header/>
       </div>
     );
   }
