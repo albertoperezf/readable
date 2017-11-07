@@ -1,9 +1,9 @@
-import React, {Component} from 'react'
-import PropTypes from 'prop-types'
-import classNames from 'classnames'
-import 'styles.scss'
+import React, {Component} from 'react';
+// import PropTypes from 'prop-types';
+// import classNames from 'classnames';
+import './styles.css';
 
-export default class Component extends Component {
+export default class PostView extends Component {
     static propTypes = {};
 
     static defaultProps = {};
@@ -28,7 +28,7 @@ export default class Component extends Component {
     render() {
         return (
             <div>
-                Hi
+                I'm the post view
             </div>
         )
     }

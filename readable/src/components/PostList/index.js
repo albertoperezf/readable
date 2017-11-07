@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-// import PropTypes from 'prop-types'
-// import classNames from 'classnames'
+// import PropTypes from 'prop-types';
+// import classNames from 'classnames';
 import Post from '../Post/index.js';
 import './styles.css';
 

@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
-import PropTypes from 'prop-types'
-import classNames from 'classnames'
-import 'styles.scss'
+// import PropTypes from 'prop-types'
+// import classNames from 'classnames'
+import './styles.css'
 
-export default class Component extends Component {
+export default class CreateView extends Component {
     static propTypes = {};
 
     static defaultProps = {};
@@ -17,18 +17,10 @@ export default class Component extends Component {
 
     }
 
-    componentWillReceiveProps(nextProps) {
-
-    }
-
-    componentWillUpdate(nextProps) {
-
-    }
-
     render() {
         return (
             <div>
-                Hi
+                I'm the view for create Post
             </div>
         )
     }

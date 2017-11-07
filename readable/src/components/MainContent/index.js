@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-// import PropTypes from 'prop-types'
-// import classNames from 'classnames'
+import { Link } from 'react-router-dom';
+// import PropTypes from 'prop-types';
+// import classNames from 'classnames';
 import CategoriesList from '../CategoriesList/index.js';
 import PostList from '../PostList/index.js';
 import './styles.css';
@@ -18,6 +19,11 @@ export default class Footer extends Component {
     render() {
         return (
             <div>
+                <div>
+                    <Link
+                        to="/managePost"
+                    />
+                </div>
                 <CategoriesList/>
                 <PostList/>
             </div>
