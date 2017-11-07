@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 // import PropTypes from 'prop-types';
 // import classNames from 'classnames';
+import GoCode from 'react-icons/lib/ti/code';
+import GoHeart from 'react-icons/lib/go/heart';
 import './styles.css'
 
 export default class Footer extends Component {
@@ -15,8 +17,8 @@ export default class Footer extends Component {
 
     render() {
         return (
-            <footer>
-                I'm the footer
+            <footer className='footer'>
+                <GoCode/> with <GoHeart/>
             </footer>
         )
     }
