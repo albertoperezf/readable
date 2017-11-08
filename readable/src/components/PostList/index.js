@@ -20,8 +20,14 @@ export default class PostList extends Component {
 
     render() {
         return (
-            <div>
+            <div className='postList'>
                 I'm the post list
+                <Post/>
+                <Post/>
+                <Post/>
+                <Post/>
+                <Post/>
+                <Post/>
                 <Post/>
             </div>
         )

@@ -20,8 +20,14 @@ export default class CategoriesList extends Component {
 
     render() {
         return (
-            <div>
+            <div className='categorieList'>
                 I'm the categories list
+                <Categories/>
+                <Categories/>
+                <Categories/>
+                <Categories/>
+                <Categories/>
+                <Categories/>
                 <Categories/>
             </div>
         )

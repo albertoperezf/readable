@@ -25,8 +25,8 @@ export default class Content extends Component {
         return (
             <div>
                 <div>
-                    <Link to="/managePost">
-                        <GoPlus/>
+                    <Link to="/managePost" className='contentLink'>
+                        <GoPlus/> Add Post
                     </Link>
                 </div>
                 <CategoriesList/>
