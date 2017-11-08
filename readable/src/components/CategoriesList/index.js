@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 // import PropTypes from 'prop-types';
 // import classNames from 'classnames';
-import Categories from '../Categories/index.js';
+import { Categories } from '../index';
 import './styles.css';
 
 export default class CategoriesList extends Component {
