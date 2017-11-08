@@ -3,9 +3,7 @@ import React, {Component} from 'react';
 // import PropTypes from 'prop-types';
 // import classNames from 'classnames';
 // import axios from 'axios';
-import Content from '../Content/index.js';
-import Footer from '../Footer/index.js';
-import Header from '../Header/index.js';
+import { Content, Footer, Header } from '../index';
 
 import './styles.css';
 

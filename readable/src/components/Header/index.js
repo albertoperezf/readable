@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 // import PropTypes from 'prop-types'
 // import classNames from 'classnames'
-import logo from '../../logo.svg';
+import {Logo} from '../index';
 import './styles.css'
 
 export default class Header extends Component {
@@ -17,7 +17,7 @@ export default class Header extends Component {
     render() {
         return (
             <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
+                <img src={Logo} className="App-logo" alt="logo" />
                 <h1 className="App-title">ReactBook</h1>
             </header>
         )
