@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 // import PropTypes from 'prop-types';
 // import classNames from 'classnames';
+import api from '../../utils/api'
 import { Categories } from '../index';
 import './styles.css';
 
@@ -19,9 +20,19 @@ export default class CategoriesList extends Component {
     }
 
     render() {
+        const categories = api.allCategories
+        // console.log(categories)
         return (
             <div className='categorieList'>
                 I'm the categories list
+
+                {/*<ul>*/}
+                    {/*{categories.map((categorie) =>*/}
+                        {/*<li>{categorie.name}</li>*/}
+                    {/*)}*/}
+                {/*</ul>*/}
+
+
                 <Categories/>
                 <Categories/>
                 <Categories/>

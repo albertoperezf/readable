@@ -4,7 +4,7 @@ const api = {
     //Get all categories
     allCategories: axios({method: 'get', url: 'http://localhost:3001/categories', headers: { 'Authorization': 'whatever-you-want' }})
     .then(function (response) {
-        console.log(response.data);
+        return response.data.categories;
     }).catch(function (error) {
         console.log(error);
     })
