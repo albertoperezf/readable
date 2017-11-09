@@ -21,7 +21,7 @@ export default class CategoriesList extends Component {
 
     render() {
         const categories = api.allCategories
-        // console.log(categories)
+        console.log(categories)
         return (
             <div className='categorieList'>
                 I'm the categories list
