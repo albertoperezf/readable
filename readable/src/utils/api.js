@@ -51,7 +51,11 @@ const api = {
         }),
 
     // POST
-    testPetition: (id, timestamp, title, body, author, category) => axios.post('http://localhost:3001/posts',
+    // Add a new post.
+    // TODO: Test petitions
+    // TODO: Add POST params to the petitions
+    // TODO: Missing header for auth
+    addPost: (id, timestamp, title, body, author, category) => axios.post('http://localhost:3001/posts',
         {
             id: `${id}`,
             timestamp: `${timestamp}`,
@@ -67,14 +71,6 @@ const api = {
             console.log(error);
         }),
 
-    // Add a new post.
-    addPost: axios({method: 'post', url: 'http://localhost:3001/posts', headers: { 'Authorization': 'superAwesomeSecret' }})
-        .then(function (response) {
-            return response.data.categories;
-        }).catch(function (error) {
-            console.log(error);
-        }),
-
     // Used for voting on a post.
     votePost: (id) =>  axios({method: 'post', url: `http://localhost:3001/posts/:${id}`, headers: { 'Authorization': 'superAwesomeSecret' }})
         .then(function (response) {
@@ -83,7 +79,7 @@ const api = {
             console.log(error);
         }),
 
-    // Get all the comments for a single post.
+    // Add a comment to a post.
     addComment: axios({method: 'post', url: `http://localhost:3001/comments`, headers: { 'Authorization': 'superAwesomeSecret' }})
         .then(function (response) {
             return response.data.categories;
