@@ -140,9 +140,9 @@ const api = {
     }),
 
     // Edit the details of an existing comment.
-    editComment: (body, timestamp) => axios({
+    editComment: (body, id, timestamp) => axios({
         method: 'put',
-        url: `http://localhost:3001/comments/${id}`,
+        url: `http://localhost:3001/comments/:${id}`,
         headers: { 'Authorization': 'superAwesomeSecret' },
         data: {
             body: `${body}`,
@@ -164,7 +164,7 @@ const api = {
         }),
 
     // Sets a comment's deleted flag to true.
-    deleteComment: (id) => axios({method: 'delete', url: `http://localhost:3001/comments/${id}`, headers: { 'Authorization': 'superAwesomeSecret' }})
+    deleteComment: (id) => axios({method: 'delete', url: `http://localhost:3001/comments/:${id}`, headers: { 'Authorization': 'superAwesomeSecret' }})
         .then(function (response) {
             return response.data.categories;
         }).catch(function (error) {
