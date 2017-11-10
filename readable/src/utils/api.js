@@ -55,45 +55,71 @@ const api = {
     // TODO: Test petitions
     // TODO: Add POST params to the petitions
     // TODO: Missing header for auth
-    addPost: (id, timestamp, title, body, author, category) => axios.post('http://localhost:3001/posts',
-        {
+    addPost: (author, body, category, id, timestamp, title) => axios({
+        method: 'post',
+        url: 'http://localhost:3001/posts',
+        headers: { 'Authorization': 'superAwesomeSecret' },
+        data: {
+            author: `${author}`,
+            body: `${body}`,
+            category: `${category}`,
             id: `${id}`,
             timestamp: `${timestamp}`,
-            title: `${title}`,
-            body: `${body}`,
-            author: `${author}`,
-            category: `${category}`
-        })
-        .then(function (response) {
-            console.log(response);
-        })
-        .catch(function (error) {
-            console.log(error);
-        }),
+            title: `${title}`
+        }
+    }).then(function (response) {
+        return response.data.categories;
+    }).catch(function (error) {
+        console.log(error);
+    }),
 
     // Used for voting on a post.
-    votePost: (id) =>  axios({method: 'post', url: `http://localhost:3001/posts/:${id}`, headers: { 'Authorization': 'superAwesomeSecret' }})
-        .then(function (response) {
-            return response.data.categories;
-        }).catch(function (error) {
-            console.log(error);
-        }),
+    // option - [String]: Either "upVote" or "downVote".
+    votePost: (id, option) => axios({
+        method: 'post',
+        url: `http://localhost:3001/posts/:${id}`,
+        headers: { 'Authorization': 'superAwesomeSecret' },
+        data: {
+            option: `${option}`
+        }
+    }).then(function (response) {
+        return response.data.categories;
+    }).catch(function (error) {
+        console.log(error);
+    }),
 
     // Add a comment to a post.
-    addComment: axios({method: 'post', url: `http://localhost:3001/comments`, headers: { 'Authorization': 'superAwesomeSecret' }})
-        .then(function (response) {
-            return response.data.categories;
-        }).catch(function (error) {
-            console.log(error);
-        }),
+    addCommentToPost: (author, body, id, parentId, timestamp) => axios({
+        method: 'post',
+        url: 'http://localhost:3001/comments',
+        headers: { 'Authorization': 'superAwesomeSecret' },
+        data: {
+            author: `${author}`,
+            body: `${body}`,
+            id: `${id}`,
+            parentId: `${parentId}`,
+            timestamp: `${timestamp}`
+        }
+    }).then(function (response) {
+        return response.data.categories;
+    }).catch(function (error) {
+        console.log(error);
+    }),
 
     // Used for voting on a comment.
-    voteComment: (id) => axios({method: 'post', url: `http://localhost:3001/comments/${id}`, headers: { 'Authorization': 'superAwesomeSecret' }})
-        .then(function (response) {
-            return response.data.categories;
-        }).catch(function (error) {
-            console.log(error);
-        }),
+    // option - [String]: Either "upVote" or "downVote".
+    voteComment: (id, option) => axios({
+        method: 'post',
+        url: `http://localhost:3001/comments/${id}`,
+        headers: { 'Authorization': 'superAwesomeSecret' },
+        data: {
+            option: `${option}`
+        }
+    }).then(function (response) {
+        return response.data.categories;
+    }).catch(function (error) {
+        console.log(error);
+    }),
 
     // PUT
     // Edit the details of an existing post.
