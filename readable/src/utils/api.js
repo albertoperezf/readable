@@ -123,20 +123,36 @@ const api = {
 
     // PUT
     // Edit the details of an existing post.
-    editPost: (id) => axios({method: 'put', url: `http://localhost:3001/posts/:${id}`, headers: { 'Authorization': 'superAwesomeSecret' }})
-        .then(function (response) {
-            return response.data.categories;
-        }).catch(function (error) {
-            console.log(error);
-        }),
+    // title - [String], body - [String].
+    editPost: (body, id, title) => axios({
+        method: 'put',
+        url: `http://localhost:3001/posts/:${id}`,
+        headers: { 'Authorization': 'superAwesomeSecret' },
+        data: {
+            body: `${body}`,
+            id: `${id}`,
+            title: `${title}`
+        }
+    }).then(function (response) {
+        return response.data.categories;
+    }).catch(function (error) {
+        console.log(error);
+    }),
 
     // Edit the details of an existing comment.
-    editComment: (id) => axios({method: 'put', url: `http://localhost:3001/comments/${id}`, headers: { 'Authorization': 'superAwesomeSecret' }})
-        .then(function (response) {
-            return response.data.categories;
-        }).catch(function (error) {
-            console.log(error);
-        }),
+    editComment: (body, timestamp) => axios({
+        method: 'put',
+        url: `http://localhost:3001/comments/${id}`,
+        headers: { 'Authorization': 'superAwesomeSecret' },
+        data: {
+            body: `${body}`,
+            timestamp: `${timestamp}`
+        }
+    }).then(function (response) {
+        return response.data.categories;
+    }).catch(function (error) {
+        console.log(error);
+    }),
 
     // DELETE
     // Sets the deleted flag for a post to 'true'. Sets the parentDeleted flag for all child comments to 'true'.
