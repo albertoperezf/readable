@@ -68,7 +68,7 @@ export default class Content extends Component {
                     </Link>
                 </p>
                 <CategoriesList categories={categories} />
-                <PostList post={posts} />
+                <PostList posts={posts} />
             </div>
         )
     }

@@ -25,11 +25,22 @@ export default class PostList extends Component {
     render() {
         const { posts } = this.props
         const {} = this.state
+        console.log(posts)
         return (
             <div className='postList'>
+                <h3>Post</h3>
                 {posts.map((post) => (
                     <Post
+                        author={post.author}
+                        body={post.body}
+                        category={post.category}
+                        deleted={post.deleted}
+                        id={post.id}
+                        key={post.id}
+                        path={post.path}
+                        timestamp={post.timestamp}
                         title={post.title}
+                        voteScore={post.voteScore}
                     />
                 ))}
             </div>
