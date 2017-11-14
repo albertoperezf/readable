@@ -5,7 +5,7 @@ const api = {
     // Get all of the categories available for the app. List is found in categories.js. Feel free to extend this list as you desire.
     allCategories: axios({method: 'get', url: 'http://localhost:3001/categories', headers: { 'Authorization': 'superAwesomeSecret' }})
         .then(function (response) {
-            return response.data.categories;
+            return response;
         }).catch(function (error) {
             console.log(error);
         }),
@@ -13,7 +13,7 @@ const api = {
     // Get all of the posts for a particular category.
     allCategoriesPost: axios({method: 'get', url: 'http://localhost:3001/category/posts', headers: { 'Authorization': 'superAwesomeSecret' }})
         .then(function (response) {
-            return response.data.categories;
+            return response;
         }).catch(function (error) {
             console.log(error);
         }),
@@ -21,7 +21,7 @@ const api = {
     // Get all of the posts. Useful for the main page when no category is selected.
     allPost: axios({method: 'get', url: 'http://localhost:3001/posts', headers: { 'Authorization': 'superAwesomeSecret' }})
         .then(function (response) {
-            return response.data.categories;
+            return response;
         }).catch(function (error) {
             console.log(error);
         }),
@@ -29,7 +29,7 @@ const api = {
     // Get the details of a single post (By id).
     postDetails: (id) => axios({method: 'get', url: `http://localhost:3001/posts/:${id}`, headers: { 'Authorization': 'superAwesomeSecret' }})
         .then(function (response) {
-            return response.data.categories;
+            return response;
         }).catch(function (error) {
             console.log(error);
         }),
@@ -37,7 +37,7 @@ const api = {
     // Get all the comments for a single post.
     getComments: (id) => axios({method: 'get', url: `http://localhost:3001/posts/:${id}/comments`, headers: { 'Authorization': 'superAwesomeSecret' }})
         .then(function (response) {
-            return response.data.categories;
+            return response;
         }).catch(function (error) {
             console.log(error);
         }),
@@ -45,7 +45,7 @@ const api = {
     // Get the details for a single comment.
     getCommentDetails: (id) => axios({method: 'get', url: `http://localhost:3001/comments/${id}`, headers: { 'Authorization': 'superAwesomeSecret' }})
         .then(function (response) {
-            return response.data.categories;
+            return response;
         }).catch(function (error) {
             console.log(error);
         }),
@@ -68,7 +68,7 @@ const api = {
             title: `${title}`
         }
     }).then(function (response) {
-        return response.data.categories;
+        return response;
     }).catch(function (error) {
         console.log(error);
     }),
@@ -83,7 +83,7 @@ const api = {
             option: `${option}`
         }
     }).then(function (response) {
-        return response.data.categories;
+        return response;
     }).catch(function (error) {
         console.log(error);
     }),
@@ -101,7 +101,7 @@ const api = {
             timestamp: `${timestamp}`
         }
     }).then(function (response) {
-        return response.data.categories;
+        return response;
     }).catch(function (error) {
         console.log(error);
     }),
@@ -116,7 +116,7 @@ const api = {
             option: `${option}`
         }
     }).then(function (response) {
-        return response.data.categories;
+        return response;
     }).catch(function (error) {
         console.log(error);
     }),
@@ -134,7 +134,7 @@ const api = {
             title: `${title}`
         }
     }).then(function (response) {
-        return response.data.categories;
+        return response;
     }).catch(function (error) {
         console.log(error);
     }),
@@ -149,7 +149,7 @@ const api = {
             timestamp: `${timestamp}`
         }
     }).then(function (response) {
-        return response.data.categories;
+        return response;
     }).catch(function (error) {
         console.log(error);
     }),
@@ -158,7 +158,7 @@ const api = {
     // Sets the deleted flag for a post to 'true'. Sets the parentDeleted flag for all child comments to 'true'.
     deletePost: (id) => axios({method: 'delete', url: `http://localhost:3001/posts/:${id}`, headers: { 'Authorization': 'superAwesomeSecret' }})
         .then(function (response) {
-            return response.data.categories;
+            return response;
         }).catch(function (error) {
             console.log(error);
         }),
@@ -166,7 +166,7 @@ const api = {
     // Sets a comment's deleted flag to true.
     deleteComment: (id) => axios({method: 'delete', url: `http://localhost:3001/comments/:${id}`, headers: { 'Authorization': 'superAwesomeSecret' }})
         .then(function (response) {
-            return response.data.categories;
+            return response;
         }).catch(function (error) {
             console.log(error);
         })
