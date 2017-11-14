@@ -1,12 +1,17 @@
 import React, {Component} from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 // import classNames from 'classnames';
 import './styles.css';
 
 export default class Categories extends Component {
-    static propTypes = {};
+    static propTypes = {
+        name: PropTypes.string,
+        path: PropTypes.string
+    };
 
-    static defaultProps = {};
+    static defaultProps = {
+        name: ''
+    };
 
     constructor(props) {
         super(props)
@@ -18,9 +23,15 @@ export default class Categories extends Component {
     }
 
     render() {
+        const { path, name } = this.props
+        const {  } = this.state
         return (
             <div>
-                I'm a categorie
+                <p>
+                    <a href={path}>
+                        {name}
+                    </a>
+                </p>
             </div>
         )
     }

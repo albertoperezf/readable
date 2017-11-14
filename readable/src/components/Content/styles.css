@@ -1,3 +1,8 @@
+.contentLinkContainer {
+    text-align: right;
+    margin-right: 5%;
+}
+
 .contentLink {
     text-decoration: none;
 }

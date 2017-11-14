@@ -1,13 +1,17 @@
 import React, {Component} from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 // import classNames from 'classnames';
 import { Post } from '../index';
 import './styles.css';
 
 export default class PostList extends Component {
-    static propTypes = {};
+    static propTypes = {
+        posts: PropTypes.array
+    };
 
-    static defaultProps = {};
+    static defaultProps = {
+        posts: []
+    };
 
     constructor(props) {
         super(props)
@@ -19,16 +23,15 @@ export default class PostList extends Component {
     }
 
     render() {
+        const { posts } = this.props
+        const {} = this.state
         return (
             <div className='postList'>
-                I'm the post list
-                <Post/>
-                <Post/>
-                <Post/>
-                <Post/>
-                <Post/>
-                <Post/>
-                <Post/>
+                {posts.map((post) => (
+                    <Post
+                        title={post.title}
+                    />
+                ))}
             </div>
         )
     }
