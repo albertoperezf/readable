@@ -27,7 +27,16 @@ export default class Comment extends Component {
     }
 
     render() {
-        const { author, body, deleted, id, parentDeleted, parentId, timestamp, voteScore } = this.props
+        const {
+            author,
+            body,
+            deleted,
+            id,
+            parentDeleted,
+            parentId,
+            timestamp,
+            voteScore
+        } = this.props
         const {  } = this.state
         return (
             <div>

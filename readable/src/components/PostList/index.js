@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom'
 // import classNames from 'classnames';
-import { Post } from '../index';
+import { GoPlus, Post } from '../index';
 import './styles.css';
 
 export default class PostList extends Component {
@@ -29,6 +30,14 @@ export default class PostList extends Component {
         return (
             <div className='postList'>
                 <h3>Post</h3>
+                <p className='addPostContainer'>
+                    <Link to="/managePost" className='addPost' >
+                        <GoPlus/> Add Post
+                    </Link>
+                </p>
+                <p className='sortPostContainer'>
+                    <GoPlus/> Sort By
+                </p>
                 {posts.map((post) => (
                     <Post
                         author={post.author}

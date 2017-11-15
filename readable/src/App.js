@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
-import { CategoriesView, CreateView, MainContent, PostView } from './components/index';
+import {
+    CategoriesView,
+    CreateView,
+    MainContent,
+    PostView
+} from './components/index';
 import './App.css';
 
 class App extends Component {

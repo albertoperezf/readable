@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
-import { Link } from 'react-router-dom'
 // import PropTypes from 'prop-types';
 // import classNames from 'classnames';
-import { CategoriesList, GoPlus, PostList } from '../index';
+import { CategoriesList, PostList } from '../index';
 import './styles.css';
 
 export default class Content extends Component {
@@ -62,11 +61,6 @@ export default class Content extends Component {
 
         return (
             <div>
-                <p className='contentLinkContainer'>
-                    <Link to="/managePost" className='contentLink' >
-                        <GoPlus/> Add Post
-                    </Link>
-                </p>
                 <CategoriesList categories={categories} />
                 <PostList posts={posts} />
             </div>

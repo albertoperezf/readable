@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 // import PropTypes from 'prop-types'
 // import classNames from 'classnames'
-import {Logo} from '../index';
+import { Logo } from '../index';
 import './styles.css'
 
 export default class Header extends Component {

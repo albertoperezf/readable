@@ -23,7 +23,10 @@ export default class Categories extends Component {
     }
 
     render() {
-        const { path, name } = this.props
+        const {
+            path,
+            name
+        } = this.props
         const {  } = this.state
         return (
             <div>
