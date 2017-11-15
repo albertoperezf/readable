@@ -6,10 +6,6 @@ import { Content, Footer, Header } from '../index';
 import './styles.css';
 
 export default class MainContent extends Component {
-    static propTypes = {};
-
-    static defaultProps = {};
-
     constructor(props) {
         super(props)
         this.state = {}

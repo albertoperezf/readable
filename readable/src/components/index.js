@@ -17,6 +17,7 @@ export {default as PostView} from './PostView/index.js';
 // Icons
 export {default as GoCode} from 'react-icons/lib/ti/code';
 export {default as GoHeart} from 'react-icons/lib/go/heart';
+export {default as GoPin} from 'react-icons/lib/go/pin';
 export {default as GoPlus} from 'react-icons/lib/go/plus';
 
 // Logos

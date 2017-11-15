@@ -10,3 +10,8 @@
 .addPost {
     text-decoration: none;
 }
+
+.sortPostContainer {
+    text-align: right;
+    margin-right: 5%;
+}

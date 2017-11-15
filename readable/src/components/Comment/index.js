@@ -15,7 +15,16 @@ export default class Comment extends Component {
         voteScore: PropTypes.number
     };
 
-    static defaultProps = {};
+    static defaultProps = {
+        author: '',
+        body: '',
+        deleted: false,
+        id: 0,
+        parentDeleted: false,
+        parentId: 0,
+        timestamp: '',
+        voteScore: 0
+    };
 
     constructor(props) {
         super(props)
@@ -37,7 +46,7 @@ export default class Comment extends Component {
             timestamp,
             voteScore
         } = this.props
-        const {  } = this.state
+        // const {  } = this.state
         return (
             <div>
                 <p>

@@ -25,15 +25,17 @@ export default class CategoriesList extends Component {
 
     render() {
         const { categories } = this.props
-        const { } = this.state
+        // const { } = this.state
         return (
-            <div className='categorieList'>
+            <div className='categoryListContainer'>
                 <h3>Categories</h3>
                 {categories.map((category) => (
                     <Categories
+                        className='categoryList'
+                        key={category.name}
                         name={category.name}
                         path={category.path}
-                        key={category.name} />
+                    />
                 ))}
             </div>
         )

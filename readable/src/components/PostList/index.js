@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom'
 // import classNames from 'classnames';
-import { GoPlus, Post } from '../index';
+import { GoPin, GoPlus, Post } from '../index';
 import './styles.css';
 
 export default class PostList extends Component {
@@ -36,7 +36,7 @@ export default class PostList extends Component {
                     </Link>
                 </p>
                 <p className='sortPostContainer'>
-                    <GoPlus/> Sort By
+                    <GoPin/> Sort By
                 </p>
                 {posts.map((post) => (
                     <Post
