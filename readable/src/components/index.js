@@ -4,6 +4,8 @@
 export {default as Categories} from './Categories/index.js';
 export {default as CategoriesList} from './CategoriesList/index.js';
 export {default as CategoriesView} from './CategorieView/index';
+export {default as Comment} from './Comment/index';
+export {default as CommentList} from './CommentList/index';
 export {default as Content} from './Content/index.js';
 export {default as CreateView} from './CreateView/index.js';
 export {default as Footer} from './Footer/index.js';
