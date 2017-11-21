@@ -25,8 +25,7 @@ export default class PostList extends Component {
 
     render() {
         const { posts } = this.props
-        const {} = this.state
-        console.log(posts)
+        // const {} = this.state
         return (
             <div className='postList'>
                 <h3>Post</h3>
