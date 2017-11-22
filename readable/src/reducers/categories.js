@@ -6,9 +6,9 @@ import {
 function categories (state = {}, action) {
     switch (action.type) {
         case ALL_CATEGORIES:
-            return state
+            return state;
         case ALL_POST_FROM_CATEGORY:
-            return state
+            return state;
         default:
             return state
     }

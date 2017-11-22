@@ -10,17 +10,17 @@ import {
 function comments (state = {}, action) {
     switch (action.type) {
         case ALL_COMMENTS_FROM_POST:
-            return state
+            return state;
         case ADD_COMMENTS_TO_POST:
-            return state
+            return state;
         case COMMENT_DETAIL:
-            return state
+            return state;
         case EDIT_COMMENT:
-            return state
+            return state;
         case DELETE_COMMENT:
-            return state
+            return state;
         case VOTE_COMMENT:
-            return state
+            return state;
         default:
             return state
     }

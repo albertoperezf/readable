@@ -8,19 +8,40 @@ import {
 } from "../actions/posts"
 
 function posts (state = {}, action) {
+    const {
+        author,
+        body,
+        category,
+        id,
+        timestamp,
+        title
+    } = action;
+
     switch (action.type) {
         case ALL_POST:
-            return state
+            return {
+                ...state
+            };
         case ADD_POST:
-            return state
+            return {
+                ...state
+            };
         case EDIT_POST:
-            return state
+            return {
+                ...state
+            };
         case DELETE_POST:
-            return state
+            return {
+                ...state
+            };
         case VOTE_POST:
-            return state
+            return {
+                ...state
+            };
         case DETAILS_POST:
-            return state
+            return {
+                ...state
+            };
         default:
             return state
     }

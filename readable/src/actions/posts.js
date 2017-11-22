@@ -6,8 +6,9 @@ export const VOTE_POST = 'VOTE_POST'
 export const DETAILS_POST = 'DETAILS_POST'
 
 // Get all of the posts. Useful for the main page when no category is selected.
-export const allPost = () => ({
-    type: ALL_POST
+export const allPost = (posts) => ({
+    type: ALL_POST,
+    posts
 });
 
 // Add a new post.
@@ -17,7 +18,7 @@ export const allPost = () => ({
 // body - [String].
 // author - [String].
 // category - Any of the categories listed in categories.js. Feel free to extend this list as you desire.
-export const addPost = (author, body, category, id, timestamp, title) => ({
+export const addPost = ({author, body, category, id, timestamp, title}) => ({
     type: ADD_POST,
     author,
     body,
@@ -42,7 +43,7 @@ export const votePost = (downVote = null, id, upVote = null) => ({
 });
 
 // Edit the details of an existing post.
-export const editPost = (body, id, title) => ({
+export const editPost = ({body, id, title}) => ({
     type: EDIT_POST,
     body,
     id,
