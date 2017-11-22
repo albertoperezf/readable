@@ -7,7 +7,7 @@ export const DETAILS_POST = 'DETAILS_POST'
 
 // Get all of the posts. Useful for the main page when no category is selected.
 export const allPost = () => ({
-    type: ALL_POST,
+    type: ALL_POST
 });
 
 // Add a new post.
